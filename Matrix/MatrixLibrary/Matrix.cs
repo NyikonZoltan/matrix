@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MachineLearningModel.Matrix
+namespace Matrix
 {
-    class Matrix<T>
+    public class Matrix<T>
     {
         private T[,] matrix;
         public static readonly Type[] supportedTypes = new Type[] { typeof(double), typeof(int), typeof(float) };

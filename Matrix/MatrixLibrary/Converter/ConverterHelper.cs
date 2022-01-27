@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MachineLearningModel.Matrix
+namespace Matrix.Converter
 {
-    class ConverterHelper<T, Q>
+    public class ConverterHelper<T, Q>
     {
         public enum ConversionType
         {

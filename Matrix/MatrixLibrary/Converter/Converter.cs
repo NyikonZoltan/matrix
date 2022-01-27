@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Matrix;
 
-namespace MachineLearningModel.Matrix
+namespace Matrix.Converter
 {
-    class Converter
+    public class Converter
     {
         public Matrix<float> DoubleToFloat(Matrix<double> input)
         {
