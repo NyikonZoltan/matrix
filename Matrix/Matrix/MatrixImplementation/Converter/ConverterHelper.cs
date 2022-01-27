@@ -18,7 +18,7 @@ namespace MachineLearningModel.Matrix
             DoubleToInt
         }
 
-        public Matrix<Q> Convert(Matrix<T> input)
+        public static  Matrix<Q> Convert(Matrix<T> input)
         {
             Matrix<Q> output = new Matrix<Q>(input.Width, input.Height);
             ConversionType conversion = TypeCheck();
@@ -36,7 +36,7 @@ namespace MachineLearningModel.Matrix
             }
             return output;
         }
-        private ConversionType TypeCheck()
+        private static ConversionType TypeCheck()
         {
             if (typeof(T) == typeof(double) && typeof(Q) == typeof(float)) return ConversionType.DoubleToFloat;
             if (typeof(T) == typeof(float) && typeof(Q) == typeof(double)) return ConversionType.FloatToDouble;

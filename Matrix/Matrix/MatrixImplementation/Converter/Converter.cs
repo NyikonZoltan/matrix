@@ -10,28 +10,32 @@ namespace MachineLearningModel.Matrix
     {
         public Matrix<float> DoubleToFloat(Matrix<double> input)
         {
-            Matrix<float> output = new Matrix<float>(input.Width, input.Height);
-            for (int x = 0; x < input.Width; x++)
-            {
-                for (int y = 0; y < input.Height; y++)
-                {
-                    output[x, y] = (float)input[x, y];
-                }
-            }
-            return output;
+            return ConverterHelper<double, float>.Convert(input);
         }
 
         public Matrix<double> FloatToDouble(Matrix<float> input)
         {
-            Matrix<double> output = new Matrix<double>(input.Width, input.Height);
-            for (int x = 0; x < input.Width; x++)
-            {
-                for (int y = 0; y < input.Height; y++)
-                {
-                    output[x, y] = Convert.ToDouble(input[x, y]);
-                }
-            }
-            return output;
+            return ConverterHelper<float, double>.Convert(input);
+        }
+
+        public Matrix<float> IntToFloat(Matrix<int> input)
+        {
+            return ConverterHelper<int, float>.Convert(input);
+        }
+
+        public Matrix<int> FloatToInt(Matrix<float> input)
+        {
+            return ConverterHelper<float, int>.Convert(input);
+        }
+
+        public Matrix<double> IntToDouble(Matrix<int> input)
+        {
+            return ConverterHelper<int, double>.Convert(input);
+        }
+        
+        public Matrix<int> DoubleToInt(Matrix<double> input)
+        {
+            return ConverterHelper<double, int>.Convert(input);
         }
     }
 }
